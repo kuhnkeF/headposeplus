@@ -1,0 +1,9 @@
+[submodule "Hopenet"]
+	path = Hopenet
+	url = https://github.com/natanielruiz/deep-head-pose
+[submodule "FSANet"]
+	path = FSANet
+	url = https://github.com/shamangary/FSA-Net.git
+[submodule "WHENet"]
+	path = WHENet
+	url = https://github.com/Ascend-Research/HeadPoseEstimation-WHENet
