@@ -1,3 +1,6 @@
+https://user-images.githubusercontent.com/35331054/216019397-2aa3de5f-ea02-4f64-898f-7f787a65cd35.mp4
+###### Our head pose predictions on Biwi [[8]](#8) dataset
+
 # HeadPose+
 
 Are head pose estimation results comparable? `not really`  
@@ -26,7 +29,7 @@ What can you find:
 
 
 ![Bounding boxes used by different methods for Biwi dataset](imgs/variants.jpg)  
-Biwi variants: Image of different face bounding boxes used by different methods for cropping Biwi [[8]](#8).
+###### Biwi variants: Image of different face bounding boxes used by different methods for cropping Biwi [[8]](#8).
 
 ## Takeaways:
 - Do different face detectors result in different **test sets**?  
