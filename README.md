@@ -1,6 +1,10 @@
 https://user-images.githubusercontent.com/35331054/216019397-2aa3de5f-ea02-4f64-898f-7f787a65cd35.mp4
 ###### Our head pose predictions on Biwi [[8]](#8) dataset
 
+# Updates
+- **20.03.2023**
+  Fixed a bug for 6DRepNet evaluation. 6DRepNet was trained with BGR images, but I used RGB for the evaluation. With this update BGR images are used instead, and the performance is now similar to the paper.
+
 # HeadPose+
 
 Are head pose estimation results comparable? `not really`  
@@ -69,8 +73,8 @@ This section is just a compilation of results on Biwi processed like Biwi+ [[3]]
 |  WHENet 2020| 4.79 | 5.06 | 6.00 | 3.33 | ypr | Biwi (FSA-Net) | 13219 | 300W_LP | Biwi+ (DLIB+manual) | ✖ | ✖ |
 |  FSA-Net 2019| 3.91 | 4.78 | 4.29 | 2.66 | ypr | Biwi (FSA-Net) | 13219 | 300W_LP | Biwi+ (DLIB+manual) | ✖ | ✖ |
 |  Hopenet 2018| 3.82 | 4.75 | 3.98 | 2.73 | ypr | Biwi (FSA-Net) | 13219 | 300W_LP | Biwi+ -> Dockerface, Hopenet | ✖ | ✖ |
-|  6DRepNet 2022| 3.71 | 4.56 | 4.03 | **2.53** | ypr | Biwi (FSA-Net) | 13219 | 300W_LP | Biwi+ -> MTCNN, FSA-Net | ✖ | ✖ |
-|  **[RCRw (proposed)](#1)** 2023 | **3.63** | **4.51** | **3.78** | 2.60 | ypr | Biwi (FSA-Net) | 13219 | 300W-LP | Biwi+ (DLIB+manual) | ✔ | ✖ |
+|  [RCRw (proposed)](#1) 2023 | 3.63 | 4.51 | 3.78 | **2.60** | ypr | Biwi (FSA-Net) | 13219 | 300W-LP | Biwi+ (DLIB+manual) | ✔ | ✖ |
+|  **6DRepNet 2022**|  **3.41** |  **3.92** |  **3.70** |  **2.60** | ypr | Biwi (FSA-Net) |  13219 | 300W-LP | Biwi+ -> MTCNN, FSA-Net | ✖ | ✖ |
 | | | | | | | | | | | | |
 |  [PADACO](#3) 2019 | 3.69 | 4.20 | **3.31** | 3.56 | ypr | Biwi (FSA-Net) | 13219 | SynHead++ | Biwi+ (DLIB+manual) | ✔ | ✖ |
 |  **[RCRw (proposed)](#1)** 2023 | **3.34** | **3.91** | 3.43 | **2.68** | ypr | Biwi (FSA-Net) | 13219 | SynHead++ | Biwi+ (DLIB+manual) | ✔ | ✖ |
@@ -84,8 +88,8 @@ Except Hopenet all methods perform best using Biwi+ face bounding boxes.
 |  WHENet | 7.25 | 8.00 | 8.05 | 5.72 | pyr | Biwi+ | 15678 | 300W_LP | Biwi+ (DLIB+manual) | ✖ | ✔ |
 |  FSA-Net | 5.75 | 6.43 | 6.27 | 4.55 | pyr | Biwi+ | 15678 | 300W_LP | Biwi+ (DLIB+manual) | ✖ | ✔ |
 |  Hopenet | 5.73 | 7.65 | 5.32 | 4.21 | pyr | Biwi+ | 15678 | 300W_LP | Biwi+ -> Dockerface, Hopenet | ✖ | ✔ |
-|  6DRepNet | 5.09 | 6.55 | 5.21 | 3.50 | pyr | Biwi+ | 15678 | 300W_LP | Biwi+ (DLIB+manual) | ✖ | ✔ |
-|  **[RCRw (proposed)](#1)** | **4.55** | **6.34** | **4.55** | **2.74** | pyr | Biwi+ | 15678 | 300W-LP | Biwi+ (DLIB+manual) | ✔ | ✔ |
+|  [RCRw (proposed)](#1) | 4.55 | 6.34 | **4.55** | **2.74** | pyr | Biwi+ | 15678 | 300W-LP | Biwi+ (DLIB+manual) | ✔ | ✔ |
+|  **6DRepNet** |  **4.39** |  **5.19** |  4.62 |  3.37 | pyr | Biwi+ |  15678 | 300W-LP | Biwi+ (DLIB+manual) | ✖ | ✔ |
 | | | | | | | | | | | | |
 |  [PADACO](#3) | 4.13 | **4.51** | 4.11 | 3.78 | pyr | Biwi+ | 15678 | SynHead++ | Biwi+ (DLIB+manual) | ✔ | ✔ |
 |  **[RCRw (proposed)](#1)** | **3.86** | 4.73 | **3.95** | **2.89** | pyr | Biwi+ | 15678 | SynHead++ | Biwi+ (DLIB+manual) | ✔ | ✔ |
