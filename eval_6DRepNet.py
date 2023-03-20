@@ -10,13 +10,14 @@ model_path = 'models/6DRepNet_300W_LP_BIWI.pth'
 
 # settings
 method_name = '6DRepNet'
-training_set = '300W_LP'
+training_set = '300W-LP'
 transformations = get_SixDRepNet_Image_Transforms() # image augs
 model_output_format = 'ypr' # model will output ypr labels
 model_pred_transform = SixDRepNet_predictions_to_ypr_eulers # use this to normalize the model output to Euler angles in degree
 
 # variants to evaluate
 variants = [('Biwi+', {}),
+            ('Biwi+', {'bbox_transform': 'Biwi+->MTCNN'}),
             ('Biwi+_non_cal', {}),
             ('Biwi+_non_cal', {'bbox_transform':'Biwi+->MTCNN'}),
             ('FSA-Net', {}),

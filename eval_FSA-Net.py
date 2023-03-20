@@ -16,7 +16,7 @@ model_paths = (model_path1, model_path2, model_path3)
 
 # settings
 method_name = 'FSA-Net'
-training_set = '300W_LP'
+training_set = '300W-LP'
 transformations = get_FSANet_image_transform()
 model_output_format = 'ypr' # model will output ypr labels
 #model_pred_transform = None # fsa outputs Euler angles in degree

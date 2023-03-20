@@ -10,7 +10,7 @@ model_path = 'models/hopenet_alpha1.pkl'
 
 # settings
 method_name = 'Hopenet'
-training_set = '300W_LP'
+training_set = '300W-LP'
 #transformations = different augs to avoid some problems with non-square bboxes
 model_output_format = 'ypr' # model will output ypr labels
 model_pred_transform = hopenet_pred_to_ypr # use this to normalize the model output to Euler angles in degree

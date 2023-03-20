@@ -13,7 +13,7 @@ model_path = 'WHENet/WHENet.h5'
 
 # settings
 method_name = 'WHENet'
-training_set = '300W_LP'
+training_set = '300W-LP'
 transformations = get_WHENet_image_transform()
 model_output_format = 'ypr' # model will output ypr labels
 #model_pred_transform = None # WHENet outputs Euler angles in degree
