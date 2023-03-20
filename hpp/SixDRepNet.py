@@ -1,3 +1,4 @@
+import PIL.Image
 import torch
 from torchvision import transforms
 import numpy as np
@@ -29,7 +30,14 @@ def load_model(model_path):
 
 
 def get_SixDRepNet_Image_Transforms():
-    transformations = transforms.Compose([transforms.Resize(256),
+    # seems like 6DRepNet performs better with BGR images
+    class RGB2BGR(torch.nn.Module):
+        def forward(self, img):
+            out = np.array(img)[:, :, [2, 1, 0]]
+            return PIL.Image.fromarray(out)
+
+    transformations = transforms.Compose([RGB2BGR(),
+                                          transforms.Resize(256),
                                           transforms.CenterCrop(224),
                                           transforms.ToTensor(),
                                           transforms.Normalize(mean=[0.485, 0.456, 0.406],
