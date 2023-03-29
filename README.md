@@ -2,6 +2,8 @@ https://user-images.githubusercontent.com/35331054/216019397-2aa3de5f-ea02-4f64-
 ###### Our head pose predictions on Biwi [[8]](#8) dataset
 
 # Updates
+- **29.03.2023**
+  Added a webcam demo ([[here]](demo/readme.md))
 - **20.03.2023**
   Fixed a bug for 6DRepNet evaluation. 6DRepNet was trained with BGR images, but I used RGB for the evaluation. With this update BGR images are used instead, and the performance is now similar to the paper.
 
