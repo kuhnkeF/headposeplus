@@ -1,9 +1,11 @@
 # Webcam demo
 
+https://user-images.githubusercontent.com/35331054/228528516-77e746af-2563-4a38-97b6-df08862cab52.mp4
+
 
 ## Setup
 
-- Install Dlip and download face detection model (optional)
+- Install Dlib and download face detection model (optional)
   
         conda activate hpp_pytorch
         pip install Dlib
