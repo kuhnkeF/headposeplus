@@ -5,6 +5,12 @@ from torchvision import models
 from torchvision import transforms
 import torch.nn as nn
 
+def get_device():
+    if torch.cuda.is_available():
+        device = torch.device("cuda:0")
+    else:
+        device = torch.device("cpu")
+    return device
 
 class Dummy(nn.Module):
     def __init__(self):
@@ -42,7 +48,8 @@ def load_model(path_f, path_t):
 
 def _load_model(model, path):
     if os.path.isfile(path):
-        state = torch.load(path)
+        device = get_device()
+        state = torch.load(path, map_location=device)
         t = model.load_state_dict(state['state_dict'], strict=True)
     else:
         raise NameError('can not load '+ path)
