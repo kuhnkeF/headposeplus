@@ -56,7 +56,8 @@ class FaceDetector:
             x_m = int(round(x - margin_x))
             y_m = int(round(y - margin_y))
             w_m = int(round(w + margin_x * 2))
-            h_m = int(round(h + margin_y * 2))
+            #h_m = int(round(h + margin_y * 2))
+            h_m = w_m
             faces.append([x_m, y_m, w_m, h_m])
 
         return faces
