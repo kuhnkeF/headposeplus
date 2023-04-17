@@ -15,7 +15,7 @@ https://user-images.githubusercontent.com/35331054/228528516-77e746af-2563-4a38-
   - Download face detection model from https://github.com/davisking/dlib-models
     - you need to download and extract https://github.com/davisking/dlib-models/blob/master/mmod_human_face_detector.dat.bz2
       to the models folder
-    - if you did not build Dlib with CUDA support you need to change force_cnn=1 in  webcam_demo.py 
+    - if you did not build Dlib with CUDA support (but want to use Dlib CNN model) you need to change force_cnn=1 in webcam_demo.py (optional)
   
 - run demo from main folder
         
